@@ -1,0 +1,104 @@
+/* 1. RESET CRÍTICO: Remova as margens e paddings de TODOS os elementos! */
+/* Use o seletor universal com box-sizing (melhor prática) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Essencial para que padding não aumente a largura/altura */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. GARANTIA DE ALTURA E LARGURA TOTAL */
+html, body {
+    width: 100%; /* Garante que não haja rolagem horizontal */
+    height: 100%; /* Garante altura total */
+    min-height: 100vh; /* Garante que a altura seja pelo menos a altura visível */
+}
+body{
+
+    /* Remove margens e paddings padrão do navegador */
+    margin: 0;
+    padding: 0;
+    background: url('./imagens/logo-fundo.jpg') no-repeat center center / cover;
+     /*Garante que a imagem preencha o BODY inteiro*/
+
+    min-height: 100vh;/* min-height: 100vh é a propriedade principal para garantir o preenchimento da altura visível */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ad0d0d;
+    padding: 25px;  /* Note que este padding agora está DENTRO da altura de 100vh graças ao box-sizing! */
+    overflow-x: hidden; /* Esconde qualquer rolagem extra, se necessário */
+}
+
+/*
+==================================================
+4. ESTILOS DOS COMPONENTES (Componentes) <--- COLOQUE AQUI
+==================================================
+*/
+
+/* 4.1 Layout do Formulário (Para o elemento com class="input-group") */
+.input-group {
+    /* Estilos iniciais (Mobile First): Bloco/Empilhado é o padrão no celular */
+    display: flex; /* Usamos flex mesmo no mobile, mas com 'flex-direction: column' implícito */
+    flex-direction: column; 
+    gap: 10px; /* Espaço entre os inputs */
+    max-width: 400px; /* Limita a largura em telas grandes para não ficar muito esticado */
+}
+
+/* 4.2 Estilo para os inputs */
+.input-group input, .input-group button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ocupa a largura total (400px) no celular */
+}
+
+/*
+==================================================
+5. MEDIA QUERIES (Sobrescrita Responsiva) <--- E AS MEDIA QUERIES AQUI
+==================================================
+*/
+
+@media (min-width: 600px) {
+    /* Mude para Horizontal em telas maiores */
+    .input-group {
+        flex-direction: row; 
+        max-width: 800px; /* Aumenta a largura em desktop */
+    }
+    /* ... outras regras de desktop ... */
+}
+
+
+.btn-agendar:active {
+    background-color: #32bd55; /* Um tom de azul bem mais escuro */
+    /* OU */
+    transform: translateY(1px); /* Move o botão levemente para baixo (efeito "pressionado") */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset; /* Adiciona uma sombra interna */
+}
+
+header {
+    padding: 22px;
+}
+
+.appointments-list-section {
+    padding: 22px;
+}
+
+.agendamento-item {
+    /* Define a cor do texto para um azul marinho escuro */
+    color: #004085; 
+    
+    /* Adiciona um preenchimento interno e margem externa */
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    
+    /* Fundo suave para destacar */
+    background-color: #f7f7f7; 
+    
+    /* Borda suave */
+    border-left: 5px solid #007bff;
+    border-radius: 4px;
+    
+    /* Garante que o texto seja fácil de ler */
+    font-size: 1.1em;
+    line-height: 1.4;
+}

@@ -4,7 +4,7 @@ Em breve mais atualizações!!!
 
 
 Novas Funcionalidades e Regras de Agendamento 1.1
-As seguintes regras foram implementadas para garantir um agendamento mais organizado e eficiente:
+As seguintes regras vão ser implementadas para garantir um agendamento mais organizado e eficiente:
 
 1. Agendamento por Departamento/Serviço
 Implementado o suporte para agendamentos específicos, permitindo que os usuários escolham o Departamento ou Tipo de Serviço desejado.

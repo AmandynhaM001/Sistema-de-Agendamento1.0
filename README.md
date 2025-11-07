@@ -1,5 +1,5 @@
 Sistema de agendamento simple 1.0
-Só para se organizar e mandar as pessoas atualizadas.
+Só para se organizar e manter as pessoas atualizadas.
 Em breve mais atualizações!!!
 
 
